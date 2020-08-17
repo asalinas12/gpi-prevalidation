@@ -42,9 +42,13 @@ public class V1ApiServiceImpl extends V1ApiService {
                 // Set response -> creditor_name_match
                 scenario_playground_check.setCreditorNameMatch(AccountValidationResponse1Code.fromValue("MTCH"));
                 // Set response -> creditor_address_match
-                scenario_playground_check.setCreditorAddressMatch(AccountValidationResponse1Code.fromValue("MTCH"));
+        //        scenario_playground_check.setCreditorAddressMatch(AccountValidationResponse1Code.fromValue("MTCH"));
+                // we are setting this to Not Applicable because this information was not passed in
+                scenario_playground_check.setCreditorAddressMatch(AccountValidationResponse1Code.fromValue("NOAP"));
                 // Set response -> creditor_organisation_identification_match
-                scenario_playground_check.setCreditorOrganisationIdentificationMatch(AccountValidationResponse1Code.fromValue("MTCH"));
+        //        scenario_playground_check.setCreditorOrganisationIdentificationMatch(AccountValidationResponse1Code.fromValue("MTCH"));
+                // we are setting this to Not Applicable
+                scenario_playground_check.setCreditorOrganisationIdentificationMatch(AccountValidationResponse1Code.fromValue("NOAP"));
                 response_success.setResponse(scenario_playground_check);
                 resp = Response.ok().entity(response_success);
                 break;
